@@ -30,22 +30,3 @@ class TodoListViewModel(private val repository: TaskRepository, private val user
         }
     }
 }
-
-/*
-class TodoListViewModel(private val repository: TaskRepository, private val username: String) : ViewModel() {
-    private val _tasks = MutableLiveData<List<Task>>()
-    val tasks: LiveData<List<Task>> get() = _tasks
-
-    init {
-        loadTasks()
-    }
-
-    private fun loadTasks() {
-        _tasks.value = repository.getTasks(username)
-    }
-
-    fun addTask(task: Task) {
-        repository.addTask(username, task)
-        loadTasks()
-    }
-}*/

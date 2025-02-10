@@ -8,6 +8,7 @@ import com.google.gson.reflect.TypeToken
 
 class AuthManager(context: Context) {
 
+    //Using MVVM
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
     private val gson = Gson()
 
@@ -89,6 +90,10 @@ class AuthManager(context: Context) {
         return sharedPreferences.getString("USERNAME", "") ?: ""
     }
 
+
+
+
+//Without MVVM
 
     /*private val sharedPreferences: SharedPreferences = context.getSharedPreferences("UserPrefs",Context.MODE_PRIVATE)
     private val gson = Gson()

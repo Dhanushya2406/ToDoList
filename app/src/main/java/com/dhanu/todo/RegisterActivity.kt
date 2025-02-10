@@ -14,7 +14,7 @@ import com.dhanu.todo.viewModelFactory.RegisterViewModelFactory
 
 class RegisterActivity : AppCompatActivity() {
 
-    //MVVM
+    //Using MVVM
     private lateinit var binding: ActivityRegisterBinding
     private val viewModel: RegisterViewModel by viewModels {
         RegisterViewModelFactory((application as TodoApplication).repository)
@@ -39,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
         } //MVVM
 
 
-        //Simple app
+        //Without MVVM
 
         /*val editUsername = findViewById<EditText>(R.id.register_username)
         val editPassword = findViewById<EditText>(R.id.register_password)

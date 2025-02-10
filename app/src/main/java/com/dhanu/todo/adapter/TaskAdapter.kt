@@ -38,6 +38,8 @@ class TaskAdapter : ListAdapter<Task, TaskAdapter.TaskViewHolder>(TaskDiffCallba
     }
 }
 
+
+//Without MVVM
 /*
 class TaskAdapter(private val Tasks: MutableList<Task>): RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 

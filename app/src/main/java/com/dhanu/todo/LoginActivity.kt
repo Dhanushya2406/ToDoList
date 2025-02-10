@@ -22,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Login Authentication
         binding.btnLogin.setOnClickListener {
             val username = binding.loginUsername.text.toString()
             val password = binding.loginPassword.text.toString()
@@ -42,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        //Don't have an account
         binding.txtRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
@@ -49,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-        //Simple app
+    //Simple app
         /*val etUsername = findViewById<EditText>(R.id.login_username)
         val etPassword = findViewById<EditText>(R.id.login_password)
         val btnLogin = findViewById<Button>(R.id.btn_login)

@@ -20,7 +20,7 @@ import com.dhanu.todo.viewModelFactory.TodoListViewModelFactory
 
 class TodoListActivity : AppCompatActivity() {
 
-    // Started MVVM
+    // Using MVVM
     private lateinit var binding: ActivityTodolistBinding
 
     private val currentUsername: String by lazy {
@@ -43,9 +43,12 @@ class TodoListActivity : AppCompatActivity() {
             adapter.submitList(it)
         })
 
+        // Add a New Task
         binding.fabAddTask.setOnClickListener {
             showAddTaskDialog()
         }
+
+        //Settings
         binding.imgSettings.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("USERNAME", currentUsername)
@@ -95,7 +98,7 @@ class TodoListActivity : AppCompatActivity() {
 
 
 
-    /*//This is simple app code
+    /*//Without MVVM
 
     private lateinit var taskAdapter: TaskAdapter // Declare TaskAdapter here
     private val taskList = mutableListOf<Task>()

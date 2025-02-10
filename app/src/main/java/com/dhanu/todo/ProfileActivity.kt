@@ -9,6 +9,8 @@ import com.dhanu.todo.utils.AuthManager
 
 class ProfileActivity : AppCompatActivity() {
 
+
+    // Using MVVM
     private lateinit var binding: ActivityProfileBinding
     private lateinit var currentUsername: String
     private lateinit var authManager: AuthManager
@@ -61,6 +63,8 @@ class ProfileActivity : AppCompatActivity() {
 }
 
 
+
+//Without MVVM
 /*
 package com.dhanu.todo
 import android.content.Intent
